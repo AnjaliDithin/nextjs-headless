@@ -1,0 +1,131 @@
+@import "../styles/variables";
+
+.testimaonial-3col{
+    background: $theme-blue;
+    padding: 5rem 0 5rem 0;
+    @media screen and (min-width: 991px) {
+        padding: 8rem 0 10rem 0;
+    }
+     @media screen and (min-width: 1180px) {
+        padding: 10rem 0 15rem 0;
+    }
+    .testimaonial-3col-area{
+        gap:0.2rem;
+    }
+    .testi-griditem{
+        width: 100%;
+        transition: 0.7s ease all;
+        background: rgba($theme-white,0.9);
+        padding: 3rem 2.5rem;
+        border: 1px solid #C0CFDF40;
+        @media screen and (min-width: 991px) {
+            padding: 3.2rem;
+        }
+        @media screen and (min-width: 1180px) {
+            padding: 5.2rem 4.4rem ;
+        }
+        &:hover{
+            transition: 0.7s ease all;
+            background: $theme-white;
+        }
+        .star-bar{
+            display: flex;
+            gap:0.25rem;
+            align-items: center;
+            justify-content: flex-start;
+            padding-bottom: 2rem;
+            img{
+                max-width: 1.7rem;
+                max-height: 1.6rem;
+                object-fit: contain;
+            }
+        }
+        .top-bar{
+            display: flex;
+            gap:1.2rem;
+            align-items: center;
+            justify-content: flex-start;
+            padding-bottom: 2.7rem;
+            border-bottom: 1px solid rgba($theme-blue,0.2);
+            .text-blk{
+                max-width: 16.1rem;
+            }
+            p{
+                display: -webkit-box;        
+                -webkit-box-orient: vertical; 
+                -webkit-line-clamp: 9;       
+                overflow: hidden;            
+                text-overflow: ellipsis;
+                min-height: auto;
+                font-size: clamp(1.4rem, 1vw ,1.7rem);
+                @media screen and (min-width: 680px) {
+                min-height: 19rem;
+                }
+                @media screen and (min-width: 1300px) {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        .icon-blk{
+            min-width: 6rem;
+            max-width: 6rem;
+            max-height: 6rem;
+            min-height: 6rem;
+            display: flex;  
+            justify-content: center;
+            align-items: center;
+            background: $theme-blue;
+            border-radius: 50%;
+            padding:1.5rem ;
+            img{
+                width: 100%;
+                height: auto;
+                max-width: 3rem;
+                max-height: 3rem;
+                object-fit: contain;
+            }
+        }
+        .btm-bar{
+            padding-top: 1.4rem;
+        }
+        .name-blk{
+            line-height: 1.2;
+            margin-bottom: 0.4rem;
+            h6{
+                color:$theme-black
+            }
+        }
+        .info-blk{
+            display: flex;
+            .desi{
+               padding-right: 1.2rem;
+                margin-right: 1.2rem;
+                position: relative;
+                line-height: 1.2;
+                font-size: clamp(13px, 1vw, 15px);
+                &::after{
+                    content: "";
+                    background-color: $theme-blue;
+                    width: 0.1rem;
+                    height: 1.5rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                    position: absolute;
+                }
+                @media screen and (min-width: 1300px) {
+                    font-size: 1.5rem;
+                }
+                    
+            }
+            .field{
+                line-height: 1.2;
+                font-size: clamp(13px, 1vw, 15px);
+                 @media screen and (min-width: 1300px) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    
+}

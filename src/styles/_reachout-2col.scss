@@ -1,0 +1,21 @@
+@import "../styles/variables";
+
+.reachout-2col{
+    padding-top: 5rem;
+    @media screen and (min-width: 991px) {
+        padding-top: 7rem;
+    }
+     @media screen and (min-width: 1180px) {
+        padding-top: 8.6rem;
+    }
+    .reachout-2col-area{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        @media screen and (min-width: 991px) {
+            flex-wrap: nowrap;
+        }
+    }
+    .heading-block {
+        max-width: 79.4rem;
+    }
+}

@@ -1,0 +1,111 @@
+@import "../styles/variables";
+
+.faq-sec {
+  background: $theme-blue;
+  padding: 5rem 0;
+  overflow-anchor: none; // prevents scroll jump
+
+  @media screen and (min-width: 991px) {
+    padding: 8rem 0 10rem 0;
+  }
+
+  @media screen and (min-width: 1180px) {
+    padding: 10rem 0 15rem 0;
+  }
+
+  .faq-area {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+
+  .accordion-item {
+    background: rgba($theme-white, 0.8);
+    padding: 2.2rem 2.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    @media screen and (min-width: 580px) {
+        padding: 2.2rem 3rem;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 2.2rem 3.6rem;
+    }
+    &:hover {
+      background: $theme-white;
+    }
+
+    .accordion-header {
+      padding: 0 3rem 0.6rem 0;
+      position: relative;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      @media screen and (min-width: 580px) {
+        padding: 0 6rem 0.6rem 0;
+      }
+      @media screen and (min-width: 768px) {
+        padding: 0 10rem 0.6rem 0;
+      }
+
+      .icon {
+        display: block;
+        position: absolute;
+        top: 0.6rem;
+        right: 0;
+        width: 1.2rem;
+        height: 0.6rem;
+        background: url('../../public/assets/down.png') center no-repeat;
+        background-size: contain;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      &.active .icon {
+        background: url('../../public/assets/up.png') center no-repeat;
+        background-size: contain;
+      }
+
+      .accordion-title {
+        font-size: clamp(1.8rem, 1vw + 1.2rem, 2rem);
+        font-weight: 500;
+        color: $theme-black;
+        line-height: 1.2;
+         @media screen and (min-width: 1300px) {
+            font-size: 2rem;
+        }
+      }
+    }
+
+    .accordion-content {
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: height 0.4s ease, opacity 0.3s ease;
+      padding-right: 3rem;
+    @media screen and (min-width: 580px) {
+         padding-right: 6rem;
+      }
+      @media screen and (min-width: 768px) {
+         padding-right: 10rem;
+      } 
+      p {
+        color: $primary-color;
+        font-size: clamp(1.4rem, 1vw, 1.6rem);
+          @media screen and (min-width: 1300px) {
+            font-size: 1.6rem;
+        }
+      }
+    }
+
+    &.active {
+    background: $theme-white;
+      .accordion-content {
+        opacity: 1;
+      }
+
+      .accordion-header .icon {
+        background: url('../../public/assets/up.png') center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

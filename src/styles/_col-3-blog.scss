@@ -1,0 +1,125 @@
+@import "../styles/variables";
+
+.col3-blog-sec{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    @media screen and (min-width: $md) {
+		padding-top: 5rem;
+        padding-bottom: 5rem;
+	}
+	@media screen and (min-width: $xl) {
+		padding-top: 8rem;
+        padding-bottom: 8rem;
+	}
+	@media screen and (min-width: $xxl) {
+		padding-top: 10rem;
+        padding-bottom: 10rem;
+	}
+     .grid-blog-area{
+        .blog-item{
+            transition: 0.7s ease all;
+            cursor: pointer;
+            a{
+                text-decoration: none;
+            }
+            background-color: transparent;
+            .top-bar{
+                margin-bottom: 1.4rem;
+                background-color: $theme-grey;
+                min-height: 13rem;
+                max-height: 20rem;
+                overflow: hidden;
+                border-radius: 1.2rem;
+                @media screen and (min-width: $md) {
+                    min-height: 20rem;
+                    max-height: 20rem;
+                }
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    min-height: 13rem;
+                    max-height: 20rem;
+                    transition: 0.7s ease all;
+                    @media screen and (min-width: $md) {
+                        min-height: 20rem;
+                        max-height: 20rem;
+                    }
+                }
+            }
+            &:hover{
+                transition: 0.7s ease all;
+                .top-bar{
+                    img{
+                        transform: scale(1.1);
+                        transition: 0.7s ease all;
+                    }
+                }
+               .readmoreLink{
+                    transition: 0.7s ease all;
+                    text-decoration: underline;
+                    &:visited,&:focus-within,&:focus-visible{
+                        color:$secondary-color;
+                    }
+               }
+            }
+        }
+        .btm-bar{
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            flex-direction: column;
+            .title-tag{
+                font-size: 1.6rem;
+                line-height: 1.3;
+                color:$theme-black;
+                margin-bottom: 0.4rem;
+                @media screen and (min-width: $sm) {
+                    font-size: 1.8rem;
+                }
+                @media screen and (min-width: $md) {
+                    font-size: 2rem;
+                }
+                @media screen and (min-width: $lg) {
+                    font-size: 2.2rem;
+                }
+            }
+            .date{
+                color: rgba($secondary-color,0.8);
+                font-size: 1.4rem;
+                margin-bottom: 0.4rem;
+                @media screen and (min-width: $md) {
+                    font-size: 1.5rem;
+                }
+                @media screen and (min-width: $lg) {
+                    font-size: 1.6rem;
+                }
+            }
+            .content{
+                overflow: hidden;
+                padding-right: 1.5rem;
+                p{
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;       /* Number of lines to show */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    margin-bottom: 0;
+                    line-height: 3rem;
+                    color:$theme-black;
+                }
+                
+            }
+            .desc-tag{
+                color: rgba($secondary-color,0.8);
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                @media screen and (min-width: $md) {
+                    font-size: 1.6rem;
+                }
+                @media screen and (min-width: $lg) {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+       
+    }
+}

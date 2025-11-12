@@ -1,0 +1,167 @@
+@import "../styles/variables";
+
+.contact-form-wrap{
+    width: 100%;
+    max-width:100%;
+    background: $theme-white;
+    padding: 3rem 1.5rem;
+    @media screen and (min-width: 780px) {
+        padding: 4rem;
+    }
+    @media screen and (min-width: 991px) {
+        max-width: 67rem;
+        padding: 4.9rem 5.7rem 5.7rem 5.7rem;
+    }
+
+    .top-title{
+        color:$theme-white;
+        font-size: clamp(18px, 2vw, 30px);
+        font-weight: 400;
+        margin-bottom: 1.4rem;
+        font-family: $secondary_font;
+        max-width: 85%;
+    }
+    .form-wrap {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap:0.5rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .form-wrap .form-field{
+        // width: 100%;
+        width: calc(50% - 0.5rem);
+        margin-bottom: 1rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        @media screen and (min-width: 680px) {
+            width: calc(50% - 0.75rem);
+        }
+    }
+    p{
+        font-size: clamp(13px, 1vw, 14px);
+        font-weight: 500;
+        color:$theme-blue;
+        text-align: center;
+    }
+    .form-field.full-width-field{
+        width: 100%;
+    }
+    input[type="text"],input[type="tel"],input[type="email"],textarea{
+        width: 100%;
+        background: transparent;
+        border: none;
+        border: 1px solid $theme-blue;
+        font-size: clamp(14px, 1vw + 10px, 17px);
+        padding: 1rem 1rem;
+        min-height: 4.5rem;
+        max-height: 4.5rem;
+        font-weight: 500;
+        font-family: $primary_font;
+        color:$secondary-color;
+        @media screen and (min-width: 680px) {
+            padding: 1.2rem 1.7rem;
+        }
+       
+        &::placeholder{
+            color: $primary-color;
+            font-size: clamp(13px, 1vw + 10px, 17px);
+        }
+       
+        &:focus{
+            outline: none;
+            border: 1px solid $secondary-color;
+        }
+    }
+
+    textarea{
+        min-height: 10rem;
+        max-height: 10rem;
+    }
+    .captcha-block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:1.5rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+    .captcha-block input{
+        // max-width:100%;
+        max-width: 140rem;
+         @media screen and (min-width: 680px) {
+            max-width: 15.2rem;
+        }
+    }
+    .captcha-block .captcha-display{
+       width: 100%;
+       display: flex;
+       align-items: center;
+       gap:1.5rem;
+       @media screen and (min-width: 680px) {
+            width: calc(100% - 17rem);
+        }
+    }
+    .captcha-block .captcha-code{
+        font-size: clamp(16px, 1vw + 10px, 22px);
+        font-weight: 600;
+        font-family: $primary_font;
+        color:$theme-blue;
+        background-color: $theme-white;
+        line-height: normal;
+        padding: 1rem;
+        min-width: 15.2rem;
+        text-align: center;
+         min-height: 4.5rem;
+        max-height: 4.5rem;
+        border: 0.1rem solid $theme-blue;
+        @media screen and (min-width: 680px) {
+            line-height: 1;
+        }
+    }
+    .captcha-block .refresh-btn{
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        box-shadow: none;
+        outline: none;
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+    }
+    &.banner-form{
+         background: rgba($secondary-color,0.8);
+        input[type="text"],input[type="tel"],input[type="email"],textarea{
+            color:$theme-white;
+            &::placeholder{
+                color: rgba($theme-white,0.5);
+            }
+            &:focus{
+                border: 1px solid $theme-white;
+            }
+        }
+         .captcha-block .captcha-code{
+            font-size: clamp(16px, 1vw + 10px, 22px);
+            font-weight: 600;
+            font-family: $primary_font;
+            color:$theme-blue;
+            background-color: $theme-white;
+            line-height: normal;
+            padding: 1rem;
+            min-width: 15.2rem;
+            text-align: center;
+            min-height: 4.5rem;
+            max-height: 4.5rem;
+            border: 0.1rem solid $theme-blue;
+            @media screen and (min-width: 680px) {
+                line-height: 1;
+            }
+        }
+    }
+}

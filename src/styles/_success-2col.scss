@@ -1,0 +1,123 @@
+@import "../styles/variables";
+
+.success-2col{
+     padding: 5rem 0 5rem 0;
+    @media screen and (min-width: 991px) {
+        padding: 8rem 0 10rem 0;
+    }
+     @media screen and (min-width: 1180px) {
+        padding: 11.6rem 0 13rem 0;
+    }
+    .success-2col-area{
+        display: flex;
+        justify-content: space-between;
+        gap:2rem;
+        flex-wrap: wrap;
+        @media screen and (min-width: 991px) {
+            flex-wrap: nowrap;
+        }
+    }
+    .left-block{
+        width: 100%;
+        @media screen and (min-width: 991px) {
+            width: calc(44% - 1rem);
+        }
+    }
+    .right-block{
+        padding-top: 2rem;
+        width: 100%;
+        @media screen and (min-width: 991px) {
+            padding-top: 6rem;
+            width: calc(52% - 1rem);
+        }
+    }
+    .counter-block-2col{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        position: relative;
+        align-items: center;
+        flex-wrap: wrap;
+         .counter-blk{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+         h3{
+            font-size: clamp(2.8rem, 1vw + 2rem, 4rem);
+            line-height: 1;
+            color:$secondary-color;
+            @media screen and (min-width: 1300px) {
+                font-size: 4rem;
+            }
+
+        }
+         .counter-text{
+            font-size: clamp(14px, 1vw + 0.5rem, 22px);
+            font-weight: 500;
+            color: $theme-light-grey;
+            @media screen and (min-width: 1300px) {
+                font-size: 2.2rem;
+            }
+        }
+        .counter-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width:100%;
+            gap:1rem 0.5rem;
+            padding: 3rem;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid rgba($theme-blue,0.2);
+            min-height: 16rem;
+
+            @media screen and (min-width: 680px) {
+                width:calc(50% - 1rem);
+            }
+            @media screen and (min-width: 768px) {
+                width:calc(50% - 2rem);
+            }
+            
+        }
+    }
+    .heading-wrap{
+        padding-bottom: 3.3rem;
+        margin-bottom: 3.2rem;
+        border-bottom: 1px solid rgba($theme-blue,0.2);
+        h3{
+            margin-bottom: 1.5rem;
+            color:$theme-black;
+            max-width: 80%;
+        }
+        p{
+            font-size: clamp(1.5rem, 1vw ,1.7rem);
+            line-height: 1.5;
+            @media screen and (min-width: 1300px) {
+                line-height: 1.7;
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .key-head{
+        width: 12%;
+        h6{
+            color:$theme-black;
+        }
+    }
+    .list-itemblk{
+        width: calc(100% - 12% - 3.4rem);
+    }
+    .results-blk{
+        display: flex;
+        gap:3.4rem;
+        justify-content: flex-start;
+        padding-bottom: 3.3rem;
+        border-bottom: 1px solid rgba($theme-blue,0.2);
+        margin-bottom: 4.8rem;
+    }
+    .success-btn{
+        justify-content: flex-end;
+    }
+}

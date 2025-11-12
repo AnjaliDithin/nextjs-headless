@@ -1,0 +1,75 @@
+@import "../styles/variables";
+
+.services-4col{
+    background: $theme-blue;
+    padding: 5rem 0 5rem 0;
+    @media screen and (min-width: 991px) {
+        padding: 8rem 0 10rem 0;
+    }
+     @media screen and (min-width: 1180px) {
+        padding: 10rem 0 17rem 0;
+    }
+    .service-griditem{
+        width: 100%;
+        border: 1px solid #C0CFDF40;
+        transition: 0.7s ease all;
+        background: $theme-white;
+        padding: 3rem 2.5rem;
+        @media screen and (min-width: 991px) {
+            padding: 3.2rem;
+        }
+        @media screen and (min-width: 1180px) {
+            padding: 4.2rem;
+        }
+        &:hover{
+            box-shadow: 0px 10px 25px 0px #000D1B40;
+            transition: 0.7s ease all;
+        }
+        .top-bar{
+            display: flex;
+            gap:1.2rem;
+            align-items: center;
+            justify-content: flex-start;
+            padding-bottom: 1.8rem;
+            h4{
+                line-height: 1.2;
+            color:$theme-black;
+            }
+            .text-blk{
+                max-width: 15rem;
+                 @media screen and (min-width: 991px) {
+                     max-width: 16.1rem;
+                }
+            }
+        }
+        .icon-blk{
+            min-width: 6rem;
+            max-width: 6rem;
+            max-height: 6rem;
+            min-height: 6rem;
+            display: flex;  
+            justify-content: center;
+            align-items: center;
+            background: $theme-blue;
+            border-radius: 50%;
+            padding:1.5rem ;
+            img{
+                width: 100%;
+                height: auto;
+                max-width: 3rem;
+                max-height: 3rem;
+                object-fit: contain;
+            }
+        }
+        .btm-bar{
+            p{
+                display: -webkit-box;        
+                -webkit-box-orient: vertical; 
+                -webkit-line-clamp: 7;       
+                overflow: hidden;            
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    
+}
